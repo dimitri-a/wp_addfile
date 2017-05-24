@@ -5,21 +5,18 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import routes from './routes.js';
 
 const router = {
-	routes,
-	history: createBrowserHistory(),
-	createElement: (component, props) => {
-		return React.createElement(component, { ...props });
-	}
+    routes,
+    history: createBrowserHistory(),
+    createElement: (component, props) => {
+        return React.createElement(component, { ...props });
+    }
 };
 
-import UserManager from 'oidc-client';
+//import Oidc from 'oidc-client';
+// userManager = new Oidc.UserManager(null);
 
-//todo remove
-debugger;
-
-export const userManager = new UserManager(null);
 
 ReactDOM.render(
-	React.createElement(Router, { ...router }),
-	document.getElementById('root')
+    React.createElement(Router, { ...router }),
+    document.getElementById('root')
 );
