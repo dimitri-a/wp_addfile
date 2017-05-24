@@ -12,6 +12,13 @@ const router = {
 	}
 };
 
+import UserManager from 'oidc-client';
+
+//todo remove
+debugger;
+
+export const userManager = new UserManager(null);
+
 ReactDOM.render(
 	React.createElement(Router, { ...router }),
 	document.getElementById('root')
